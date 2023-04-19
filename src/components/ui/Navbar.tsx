@@ -1,4 +1,4 @@
-import { Spacer, Text, useTheme, Link } from "@nextui-org/react";
+import { Spacer, Text, useTheme, Link, Grid } from "@nextui-org/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
@@ -13,7 +13,7 @@ export const Navbar = () => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "start",
-        padding: "0px 20px",
+        padding: "0px 20px 0px 0px",
         background: theme?.colors.gray50.value,
       }}
     >
@@ -24,24 +24,27 @@ export const Navbar = () => {
         height={70}
       />
 
-      <NextLink href="/" passHref legacyBehavior>
-        <Link>
-          <Text color="white" h2>
-            P
-          </Text>
-          <Text color="white" h3>
-            okemon
-          </Text>
-        </Link>
-      </NextLink>
+      <Link>
+        <NextLink href="/" passHref legacyBehavior>
+          <Grid.Container alignItems="center">
+            <Text color="white" h2>
+              P
+            </Text>
+            <Text color="white" h3>
+              okemon
+            </Text>
+          </Grid.Container>
+        </NextLink>
+      </Link>
 
       <Spacer css={{ flex: 1 }} />
 
-      <NextLink href='/favorites' passHref legacyBehavior>
-        <Link>
-          <Text color="white">Favoritos</Text>
-        </Link>
-      </NextLink>
+      <Link>
+        <NextLink href="/favorites" passHref legacyBehavior>
+          <Text color="#B583E7
+">Favoritos</Text>
+        </NextLink>
+      </Link>
     </div>
   );
 };
